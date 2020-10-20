@@ -2,6 +2,7 @@ package com.brad.testlab
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.RadioGroup
@@ -12,6 +13,7 @@ import kotlin.math.pow
 
 class MainActivity_Janken : AppCompatActivity(), View.OnClickListener,
     RadioGroup.OnCheckedChangeListener {
+    private val TAG = "MainActivity_Janken"
     private val JANKEN_ROCK = 0
     private val JANKEN_PAPER = 1
     private val JANKEN_SCISSORS = 2
@@ -25,6 +27,7 @@ class MainActivity_Janken : AppCompatActivity(), View.OnClickListener,
         radioGroup.setOnCheckedChangeListener(this)
         btn_janken.setOnClickListener(this)
         radioGroup.clearCheck()
+        Log.i(TAG, "onCreate: ")
 
     }
 
